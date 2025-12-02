@@ -1,0 +1,20 @@
+def problem(a,b,c):
+    if a>0:
+        x=a*b
+    elif a<=0:
+        x=a-b
+    
+
+    if c%2==0:
+        y=c+x
+    else:
+        y=c-x
+    return y    
+    if y<0:
+        y*=-1
+    return y,x
+
+a=int(input())
+b=int(input())
+c=int(input())
+print(problem(a,b,c))
