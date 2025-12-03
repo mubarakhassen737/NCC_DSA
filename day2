@@ -1,0 +1,51 @@
+#first
+
+
+def check(a):
+    if a%2==0:
+        return 'even'
+    else:
+        return 'odd' 
+a=int(input())   
+print(check(a))     
+
+
+#second
+
+
+
+def problem2(a,b):
+    if a>b:
+        return a-b
+    else:
+        return a+b
+a=int(input()) 
+b=int(input())       
+print(problem2(a,b))
+
+#third
+
+
+
+def problem3(x,y,z):
+    if x>0:
+        k=x*y
+    else:
+         k=x-y
+    if z%2==0:
+        c=k+z
+    else:
+        c=z-k
+    return abs(c)
+x=int(input())
+y=int(input())
+z=int(input())    
+print(problem3(x,y,z))
+
+#forth
+
+
+a=int(input())
+print (abs(a))
+            
+    
