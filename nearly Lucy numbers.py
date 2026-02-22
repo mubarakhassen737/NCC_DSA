@@ -6,7 +6,7 @@ if len(n) == 4 or len(n) == 7:
         if i != '4' and i != '7':
             print('NO')
             break
-    else:  # Runs only if the loop didn't break
+    else:  
         print('YES')
 else:
     print('NO')
