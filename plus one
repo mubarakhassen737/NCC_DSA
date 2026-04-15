@@ -1,0 +1,16 @@
+class Solution:
+    def plusOne(self, digits: List[gint]) -> List[int]:
+        a=[]
+        for i in digits:
+            i=str(i)
+            a.append(i)
+        q=''.join(a)
+        q=int(q)
+        q=q+1
+        q=str(q)
+
+        w=[]
+        for i in q:
+            i=int(i)
+            w.append(i)
+        return w    
