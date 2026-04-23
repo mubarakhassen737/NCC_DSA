@@ -1,0 +1,15 @@
+t=int(input())
+for i in range(t):
+    n=int(input())
+    ans=0
+    mx=0
+    for x in range(2,n+1):
+        SUM=0
+        k=1
+        while(x*k<=n):
+            SUM+=x*k
+            k+=1
+        if SUM>mx:
+            mx=SUM
+            ans=x
+    print(ans)
