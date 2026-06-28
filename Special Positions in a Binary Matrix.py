@@ -1,30 +1,24 @@
-class Solution {
-public:
-    int numSpecial(vector<vector<int>>& a) {
-        int x = a.size();
-        int y = a[0].size();
+class Solution:
+    def numSpecial(self, a):
+        c = 0
 
-        vector<int> p(x, 0), q(y, 0);
+        for i in range(len(a)):
+            for j in range(len(a[0])):
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                if (a[i][j] == 1) {
-                    p[i]++;
-                    q[j]++;
-                }
-            }
-        }
+                if a[i][j] == 1:
 
-        int z = 0;
+                    x = 0
+                    y = 0
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                if (a[i][j] == 1 && p[i] == 1 && q[j] == 1) {
-                    z++;
-                }
-            }
-        }
+                    for k in range(len(a[0])):
+                        if a[i][k] == 1:
+                            x += 1
 
-        return z;
-    }
-};
+                    for k in range(len(a)):
+                        if a[k][j] == 1:
+                            y += 1
+
+                    if x == 1 and y == 1:
+                        c += 1
+
+        return c
