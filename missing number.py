@@ -1,14 +1,9 @@
-class Solution {
-public:
-    int missingNumber(vector<int>& a) {
+class Solution:
+    def missingNumber(self, a):
+        a.sort()
 
-        sort(a.begin(), a.end());
+        for i in range(len(a)):
+            if a[i] != i:
+                return i
 
-        for(int i = 0; i < a.size(); i++) {
-            if(a[i] != i)
-                return i;
-        }
-
-        return a.size();
-    }
-};
+        return len(a)
